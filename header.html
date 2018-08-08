@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>医疗器械分类目录(2018年8月1日实施) | 医疗器械分类目录最新版快速查询</title>
+	<meta name="keywords" content="医疗器械分类目录,医疗器械分类,2017年版,2018年版,医疗器械,医械,分类,目录,分类目录,分类查询,分类目录查询,一类二类三类,医疗器械查询,医疗器械注册,医疗器械研发,医疗器械生产许可证,医疗器械经营许可证,医械查,智械">
+	<meta name="description" content="2018年8月1日起正式实施最新版《医疗器械分类目录》，智械速查提供最新版本《医疗器械分类目录》产品编码（目录/大类/小类）、产品描述、预期用途、管理类别（一类二类三类）及品名举例的快速查询。">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/base64.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		var keyword_from_url = top.window.location.search;
+		var classify = keyword_from_url.substring(10,13)
+		var keyword = Base64.decode(keyword_from_url.substring(21));
+		if(classify == "key"){
+			$(".search_input").val(keyword);
+		}else if(classify == "num"){
+			$(".search_input_number").val(keyword);
+		}
+		
+	})
+	function toIndex(){
+		top.window.location.href = "index.html";
+	}
+
+</script>
+<body>
+	<div class="header">
+	<div class="header_top">
+		<div class="container">
+			<div class="row">
+				<div class="pull-left">
+					<a href="javascript:void(0)" onclick="toIndex()">医疗器械分类目录</a>
+				</div>
+				<div class="pull-right">
+					<a href="http://www.yixiecha.cn/?fr=mulu-header" target="_blank">医械查</a>&nbsp;&nbsp;|&nbsp;
+					<a href="http://liexin.zhixie.info/?fr=mulu-header" target="_blank">智械猎新</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header_title">
+		<div class="container">
+			<div class="row">
+				医疗器械分类目录速查
+			</div>
+		</div>
+	</div>
+	<div class="header_search">
+		<div class="container">
+			<div class="row">
+				<div class="form-inline" style="margin-top: 30px;">
+					<div class="input-group pull-left" style="width:50%">
+						<input type="text" class="form-control search_input_number" placeholder="请输入分类目录编号" onkeypress="getNumKey();">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-primary search_number_btn">
+								查找
+							</button>
+						</div>
+					</div>
+					<div class="input-group pull-right" style="width: 50%">
+						<input type="text" class="form-control search_input" placeholder="请输入分类名称" onkeypress="getWordKey();">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-primary search_btn">
+								查找
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

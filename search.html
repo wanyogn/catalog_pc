@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>最新医疗器械分类目录(2017版)查询 | 2018年8月1日实施 | 新《分类目录》快速查询</title>
+	<meta name="keywords" content="医疗器械分类目录,2017年版,新《分类目录》,分类目录,分类查询,分类目录查询,一类二类三类,医疗器械查询,医疗器械注册,医疗器械研发,医疗器械生产许可证,医疗器械经营许可证,医械查,智械">
+	<meta name="description" content="2018年8月1日起正式实施最新版《医疗器械分类目录》，智械速查提供最新版本《医疗器械分类目录》产品编码（目录/大类/小类）、产品描述、预期用途、管理类别（一类二类三类）及品名举例的快速查询。">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/base64.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?3b1b582f4f8c13a523bdb25f58b27fc4";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<script type="text/javascript">
+
+		function aa(){
+			var hih=$(window).scrollTop();
+			if(hih > 280){
+				var cha = hih - 245;
+				//$(".content_main_right").attr("style","margin-top:"+cha+"px");
+				//$(".content_main_right").addClass("top");
+			}else{
+				//$(".content_main_right").attr("style","margin-top:35px");
+			}
+		}
+	setInterval("aa()",0.1);
+ </script>
+</head>
+<body>
+	<!--header  start-->
+	<div class="header">
+		<div class="header_top">
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<a href="index.html" class="xcx">微信小程序</a>&nbsp;&nbsp;|&nbsp;
+						<a href="index.html">医疗器械分类目录</a>
+						<div style="position: absolute;z-index: 1000;left: -4%;display: none;" class="xcx_code">
+							<img src="image/weixin.jpg" style="width: 140px;height: 140px;">
+						</div>
+					</div>
+					<div class="pull-right">
+						<a href="http://www.yixiecha.cn/?fr=mulu-header" target="_blank">医械查</a>&nbsp;&nbsp;|&nbsp;
+						<a href="http://liexin.zhixie.info/?fr=mulu-header" target="_blank">智械猎新</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_title">
+			<div class="container">
+				<div class="row">
+					<h1>医疗器械分类目录速查</h1>
+				</div>
+			</div>
+		</div>
+		<div class="header_search">
+			<div class="container">
+				<div class="row">
+					<div class="form-inline" style="margin: 30px auto  0 auto;padding-left: 13%;">
+						<div class="input-group pull-left" style="width: 60%">
+							<input type="text" class="form-control search_input" placeholder="请输入关键词，多个关键词以空格隔开，如“超声 聚焦，髋臼 钻”" onkeypress="getWordKey();">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-primary search_btn">
+									查找
+								</button>
+							</div>
+						</div>
+						<div class="input-group pull-left" style="width:24%">
+							<input type="text" class="form-control search_input_number" placeholder="请输入6位数字分类编码" onkeypress="getNumKey();">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-primary search_number_btn">
+									查找
+								</button>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--header  end-->
+	<!--content_main  start-->
+	<div class="content_main" style="margin-top: -5px;">
+		<div class="container" style="padding-top: 20px;">
+			<div class="row">
+				<div class="content_main_left pull-left">
+					<div class="content_main_left_top">
+						<div class="pull-left result">
+							您搜索的关键词是： <span class="key"></span> ，为您找到<span class="num"></span>条结果
+						</div>
+						<div class="pull-right result_scan" style="display: none;">
+							<div class="checkbox pull-left">
+								<label>
+									<input type="checkbox" checked="checked" class="checkboxML" name="checkboxML" value="1"> 标准目录
+								</label>
+							</div>
+							<div class="checkbox pull-left">
+								<label>
+									<input type="checkbox" checked="checked" class="checkboxML" name="checkboxML" value="2"> IVD子目录
+								</label>
+							</div>
+							<select class="gllb _choose">
+								<option value="0">--管理类别--</option>
+								<option value="1">I类</option>
+								<option value="2">II类</option>
+								<option value="3">III类</option>
+							</select>
+							
+							<select class="yxzh _choose">
+								<option value="0">--药械组合--</option>
+								<option value="1">是</option>
+								<option value="2">否</option>
+							</select>
+						</div>
+					</div>
+					<div class="content_main_container_right pull-right" style="width: 100%;">
+							<div class="main_product">
+							</div>
+						</div>
+				</div>
+				<div class="pull-left content_main_right">
+					<div class="content_main_right_first">
+						<img src="image/logo.png">
+						<div class="right_title">最好用的医疗器械查询工具</div>
+						<div class="input-group">
+							<input type="text" class="form-control yixiecha_input" disabled="disabled" onkeypress="getYXCKey()">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-primary yixiecha_btn">
+									<span class="glyphicon glyphicon-search" style="color: #0092dd"></span>
+								</button>
+							</div>
+						</div>
+						<div class="yixiecha_result">为您找到<span class="yixiecha_number"></span>条结果</div>
+						<div class="yixiecha_result_content">
+							
+						</div>
+						<a type="button" href="http://www.yixiecha.cn/search_pro.html?class=pro&keyword=" target="_blank" class="btn btn-primary click_show">
+							点击查看
+						</a>
+					</div>
+					<div class="content_main_right_second">
+						<a href="http://huitongmedical.com" target="_blank"><img src="image/advertisement.jpg"></a>
+					</div>
+					<div class="content_main_right_second">
+						<a href="http://www.ylqxcxz.com?from=zhixie" target="_blank"><img src="image/advertisement.png"></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--content_main  end-->
+	<div class="footer" style="color: #808080">
+		<div class="container">
+			<div class="row" >
+				<div class="footer_main">
+					<table class="foot_table pull-left">
+						<tbody>
+							<tr>
+								<td style="width: 129px;">
+									<div class="tab" style="width: 90px;">关于我们</div>
+								</td>
+								<td style="width:286px;">
+									<div class="tab" style="width: 250px;">联系我们</div>
+								</td>
+								
+							</tr>
+							<tr>
+								<td><a href="aboutus.html" target="_blank" class="aboutus" title="关于我们">关于我们</a></td>
+								<td>工作时间：周一至周五&nbsp;9:00-18:00</td>
+								
+							</tr>
+							<tr>
+								<td></td>
+								<td>商务合作：BD@zhixie.info</td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="http://samr.sfda.gov.cn/WS01/CL0087/177089.html" target="_blank">
+						<div class="footer_tip pull-left">
+							<div class="padding">
+								<div class="footer_tip_title">
+									国家食品药品监督管理总局关于发布医疗器械分类目录的公告
+								</div>
+								<div class="footer_tip_time">
+									2017年第104号 · 2017年8月31日
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="http://samr.sda.gov.cn/WS01/CL0845/94641.html" target="_blank">
+						<div class="footer_tip pull-right">
+							<div class="padding">
+								<div class="footer_tip_title">
+									国家食品药品监督管理总局关于印发体外诊断试剂分类子目录的通知
+								</div>
+								<div class="footer_tip_time">
+									食药监械管〔2013〕242号 · 2013年11月26日
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="company_name"><a href="http://www.miibeian.gov.cn/publish/query/indexFirst.action" style="color: #595757;" target="_blank">苏ICP备18028618号</a>  |  南京智械信息科技有限公司    版权所有© 2018</div>
+			</div>
+		</div>
+	</div>
+	<div class="service">
+		<div class="service_li wx">
+			<div class="service_image">
+				<img src="image/wx_03.png">
+			</div>
+			<p>微信 </p>
+		</div>
+		<div class="service_li fk">
+			<div class="service_image">
+				<img src="image/fankui_07.png">
+			</div>
+			<p>反馈 </p>
+		</div>
+		<div class="service_li zd" >
+			<div class="service_image">
+				<img src="image/zhiding_07.png">
+			</div>
+			<p>置顶 </p>
+		</div>
+		<div class="appcontent collapse code_main" style="bottom: 25px">
+			<img src="image/weixin.jpg">
+			<p style="padding-bottom: 15px;">关注微信小程序</p>
+		</div>
+		<div class="wxcontent collapse code_main" style="bottom: 24px;">
+			<img src="image/weixin.jpg">
+			<p style="padding-bottom: 15px;">关注微信小程序</p>
+		</div>
+	</div>
+	<div id="detail_template" style="display: none;">
+		<div class="list-data">
+			<div class="data-title">
+				<div style="width: 80%">
+					<!-- <div class="pull-left product_number" style="width: 14%"></div> -->
+					<div class="pull-left product_number" style="width: 90px;">
+						<span class="dir_num"></span>
+						<span class="first_num"></span>
+						<span class="second_num"></span>
+					</div>
+					<div class="pull-left product_title"></div>
+				</div>
+				
+				<div class="pull-right product_destinction">
+					<a href="index.html?currentDir=" class="first_name" target="_blank"></a>->
+					<a href="index.html?currentDir=" class="second_name" target="_blank"></a>
+				</div>
+			</div>
+			<div class="data-main">
+				
+			</div>
+		</div>
+	</div>
+	<div id="data_template" style="display: none;">
+		<div class="data-inner">
+			<table style="width: 100%;">
+				<tr>
+					<td style="width: 80%">
+						<table class="product_detail_table" style="width: 100%">
+							<tr>
+								<td style="width: 80px;">产品描述：</td>
+								<td class="product_description"></td>
+							</tr>
+							<tr>
+								<td>预期用途：</td>
+								<td class="product_use"></td>
+							</tr>
+							<tr>
+								<td>品名举例：</td>
+								<td class="product_example"></td>
+							</tr>
+						</table>
+					</td>
+					<td style="width: 20% ;vertical-align:top">
+						<div class="aa">
+							<div class="product_classify"></div>
+							<div class="product_isZH"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="data_template_ivd" style="display: none;">
+		<div class="data-inner">
+			<table style="width: 100%;">
+				<tr>
+					<td style="width: 80%">
+						<table class="product_detail_table" style="width: 100%">
+							<tr>
+								<td style="width: 80px;">预期用途：</td>
+								<td class="product_use"></td>
+							</tr>
+						</table>
+					</td>
+					<td style="width: 20% ;vertical-align:top">
+						<div class="aa">
+							<div class="product_classify"></div>
+							<div class="product_isZH"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

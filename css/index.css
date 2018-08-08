@@ -1,0 +1,30 @@
+
+.content_dir{margin-top: 10px;}
+.content_main{min-height: 1000px;}
+.content_main_title{width: 100;height: 70px;background-color: #00c4c6;color: #fff;font-size: 28px;text-align: center;line-height: 70px;}
+.content_main_container{margin-top: 13px;padding-bottom: 20px;}
+.content_main_container .list-group-item{padding-left: 30px;}
+.content_main_container_left,.content_main_container_right{background-color: #fff}
+.content_main_container_left a{cursor: pointer;}
+.main_product{padding: 0 20px 20px 20px;}
+.main_product p{text-indent: 30px;font-size: 16px;line-height: 25px;}
+.main_product p:first-child{padding-top: 20px;}
+.main_product .emphasize{font-weight: bold;}
+.data-title{height: 60px;width: 100%;border-bottom: 1px solid #d5d5d5;}
+.product_number{line-height:60px;color: #00c4c6;font-size: 20px;font-weight: bold; }
+.product_number span{display: block;margin: 0;padding: 0;float: left;}
+.product_title{line-height:60px;color: #00c4c6;font-size: 20px;font-weight: bold;}
+.product_show{background: url('../image/arrow_t.png');width: 20px;height: 20px;margin:22px 0 0 20px;cursor: pointer;}
+.product_destinction{line-height:60px;color: #00c4c6;}
+.product_destinction_content{color: #00c4c6;border-color:#00c4c6 }
+.data-inner{width: 100%;height: auto;padding: 10px 0;border-bottom: 1px solid #d5d5d5;}
+.product_detail_table{border-collapse:separate; border-spacing:0px 5px;}
+.product_detail_table tr{}
+.product_detail_table tr td:first-child{color: #595757;vertical-align: top;font-weight: bold;}
+.product_detail_table tr td:last-child{color: #898989;}
+.aa{width: 80%;margin-left: 10%;}
+.product_classify{width: 45px;height: 45px;background-color: #efefef;border-radius:10px;text-align: center;color: #bfbfbf;line-height: 45px;font-size: 28px;font-weight: bold;margin: auto;margin-top: 5px;}
+.product_isZH{width: 100%;height: 27px;background-color: #efefef;border-radius:10px;text-align: center;color: #bfbfbf;line-height: 27px;margin-top: 15px;}
+.product_example a{color: #286090 !important;}
+.product_example a:hover{color: #f39800 !important;text-decoration: none;}
+.badge{margin-left: 3px;background-color: #efefef !important;color: #00c4c6 !important;}
