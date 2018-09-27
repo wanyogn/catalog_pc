@@ -22,12 +22,12 @@ $(function(){
         $($(this).find("img")).attr("src","image/fankui_07.png");
         $($(this).find("p")).css("color","#7d8292");
     });
-    $(".fk").click(function(){
+    /*$(".fk").click(function(){
         layer.alert('该功能建设中，敬请期待。。。', {
                 icon: 6,
                 skin: 'layer-ext-moon'
         })
-    });
+    });*/
     /*置顶*/
     $(".zd").mouseover(function(){
         $($(this).find("img")).attr("src","image/zhiding_hover.png");

@@ -18,8 +18,10 @@ $(function(){
             $(".search_input").val(keyword);
             contentPro(json);
             $(".result_scan").show();
+            sendAjax("/method/insertUsersearchInfo",{"userid":-1,"classtype":"key","keyword":keyword,"resultcount":json.matchCount,"searchtype":"FLML_PC"},function(result){})
 		});
-        sendAjax("http://localhost:9005/catalog/insertSearchInfo",{"keyword":keyword,"searchtype":"key"},function(result){});
+        //sendAjax("http://localhost:9005/catalog/insertSearchInfo",{"keyword":keyword,"searchtype":"key"},function(result){});
+
 	}else if(classify == "num"){
 		sendAjax("http://localhost:9005/catalog/searchProductByNum",{"number":keyword},function(result){
 			$("._choose").hide();
@@ -28,8 +30,9 @@ $(function(){
             $(".num").html(json.matchCount);
             $(".search_input_number").val(keyword);
             contentPro(json);
+            sendAjax("/method/insertUsersearchInfo",{"userid":-1,"classtype":"number","keyword":keyword,"resultcount":json.matchCount,"searchtype":"FLML_PC"},function(result){})
 		});
-        sendAjax("http://localhost:9005/catalog/insertSearchInfo",{"keyword":keyword,"searchtype":"number"},function(result){});
+       // sendAjax("http://localhost:9005/catalog/insertSearchInfo",{"keyword":keyword,"searchtype":"number"},function(result){});
 	}
     searchYXC(searchKey);
     /*搜索*/

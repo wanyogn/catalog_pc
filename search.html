@@ -10,12 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/search.css">
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/layer/layer.js"></script>
-	<script type="text/javascript" src="js/base64.min.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/search.js"></script>
+
 	<script>
 	var _hmt = _hmt || [];
 	(function() {
@@ -221,32 +216,7 @@
 		</div>
 	</div>
 	<div class="service">
-		<div class="service_li wx">
-			<div class="service_image">
-				<img src="image/wx_03.png">
-			</div>
-			<p>微信 </p>
-		</div>
-		<div class="service_li fk">
-			<div class="service_image">
-				<img src="image/fankui_07.png">
-			</div>
-			<p>反馈 </p>
-		</div>
-		<div class="service_li zd" >
-			<div class="service_image">
-				<img src="image/zhiding_07.png">
-			</div>
-			<p>置顶 </p>
-		</div>
-		<div class="appcontent collapse code_main" style="bottom: 25px">
-			<img src="image/weixin.jpg">
-			<p style="padding-bottom: 15px;">关注微信小程序</p>
-		</div>
-		<div class="wxcontent collapse code_main" style="bottom: 24px;">
-			<img src="image/weixin.jpg">
-			<p style="padding-bottom: 15px;">关注微信小程序</p>
-		</div>
+
 	</div>
 	<div id="detail_template" style="display: none;">
 		<div class="list-data">
@@ -324,5 +294,14 @@
 			</table>
 		</div>
 	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/base64.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+<script>
+    $(".service").load("service.html");
+</script>
 </body>
 </html>

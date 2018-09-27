@@ -1,4 +1,4 @@
-body{font-size: 14px;font-family: "微软雅黑";}
+body{font-size: 14px;font-family: "微软雅黑";padding-right: 0 !important;overflow-y: inherit !important;}
 a:hover{text-decoration: none;color: #286090;}
 .layui-layer-content{color: #808080;}
 a{color: #fff;text-decoration: none;}
@@ -47,3 +47,5 @@ a{color: #fff;text-decoration: none;}
  .service p{color: #7d8292;text-align: center;}
  .code_main{width: 129px;height: 160px;background: #fff;border: 1px solid #e0e0e0;position: absolute;right: 39px;text-align: center;}
  .code_main img{width: 129px;height: 129px;}
+
+.input-group .form-control,.btn {z-index: 0 !important;}
