@@ -19,7 +19,7 @@ a{color: #fff;text-decoration: none;}
 .search_btn,.search_number_btn{background-color: #fff;color:#11d07f;border-color: #fff;}
 .content_first{width: 100%;height: auto;background-color: #fff;padding-bottom: 20px;}
 .tooltip-inner{background-color: #00c4c6}
-.top{z-index: 1000;position: fixed;top: 0px;}
+.top{z-index: 0;position: fixed;top: 0px;}
 .large .btn-dir{width: 60px;height: 60px;margin-right: 33px;margin-top: 20px;font-size: 20px;color: #00c4c6;font-weight: bold;text-align: center;padding: 0}
 .small .btn-dir{width: 40px;height: 40px;margin-right: 7px;margin-top: 20px;font-size: 20px;color: #00c4c6;font-weight: bold;text-align: center;padding: 0}
 .btn-dir:hover{background-color: #00c4c6;color: #fff;}

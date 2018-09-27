@@ -28,3 +28,5 @@
 .product_example a{color: #286090 !important;}
 .product_example a:hover{color: #f39800 !important;text-decoration: none;}
 .badge{margin-left: 3px;background-color: #efefef !important;color: #00c4c6 !important;}
+
+.modal-backdrop{background-color: #ffffff}

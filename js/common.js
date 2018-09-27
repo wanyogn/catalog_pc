@@ -4,41 +4,7 @@ $(function(){
     },function(){
         $(".xcx_code").hide();
     });
-    /*微信*/
-    $(".wx").mouseover(function(){
-        $($(this).find("img")).attr("src","image/wx_hover.png");
-        $($(this).find("p")).css("color","#0084ff");
-        $(".wxcontent").show();
-    }).mouseout(function(){
-        $($(this).find("img")).attr("src","image/wx_03.png");
-        $($(this).find("p")).css("color","#7d8292");
-        $(".wxcontent").hide();
-    });
-    /*反馈*/
-    $(".fk").mouseover(function(){
-        $($(this).find("img")).attr("src","image/fankui_hover.png");
-        $($(this).find("p")).css("color","#0084ff");
-    }).mouseout(function(){
-        $($(this).find("img")).attr("src","image/fankui_07.png");
-        $($(this).find("p")).css("color","#7d8292");
-    });
-    /*$(".fk").click(function(){
-        layer.alert('该功能建设中，敬请期待。。。', {
-                icon: 6,
-                skin: 'layer-ext-moon'
-        })
-    });*/
-    /*置顶*/
-    $(".zd").mouseover(function(){
-        $($(this).find("img")).attr("src","image/zhiding_hover.png");
-        $($(this).find("p")).css("color","#0084ff");
-    }).mouseout(function(){
-        $($(this).find("img")).attr("src","image/zhiding_07.png");
-        $($(this).find("p")).css("color","#7d8292");
-    });
-    $(".zd").click(function(){
-        document.documentElement.scrollTop = document.body.scrollTop = 0;
-    });
+
 
 	
     $(".footer_tip").hover(function(){
