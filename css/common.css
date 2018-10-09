@@ -19,7 +19,7 @@ a{color: #fff;text-decoration: none;}
 .search_btn,.search_number_btn{background-color: #fff;color:#11d07f;border-color: #fff;}
 .content_first{width: 100%;height: auto;background-color: #fff;padding-bottom: 20px;}
 .tooltip-inner{background-color: #00c4c6}
-.top{z-index: 0;position: fixed;top: 0px;}
+.top{z-index: 1;position: fixed;top: 0px;}
 .large .btn-dir{width: 60px;height: 60px;margin-right: 33px;margin-top: 20px;font-size: 20px;color: #00c4c6;font-weight: bold;text-align: center;padding: 0}
 .small .btn-dir{width: 40px;height: 40px;margin-right: 7px;margin-top: 20px;font-size: 20px;color: #00c4c6;font-weight: bold;text-align: center;padding: 0}
 .btn-dir:hover{background-color: #00c4c6;color: #fff;}
@@ -35,6 +35,8 @@ a{color: #fff;text-decoration: none;}
 .footer_tip_time{margin-top: 10px;font-size: 12px;color: #b8b8b8}
 .padding{padding:26px 20px;}
 .company_name{padding: 30px 0;color: #595757;}
+.company{color: #595757;}
+.link_name {color: #7d7d7d;font-size: 16px; font-weight: bold;}
 .footer_main a{color: #7d7d7d}
 .footer_main a:hover{color: #f39800;}
 
@@ -47,5 +49,5 @@ a{color: #fff;text-decoration: none;}
  .service p{color: #7d8292;text-align: center;}
  .code_main{width: 129px;height: 160px;background: #fff;border: 1px solid #e0e0e0;position: absolute;right: 39px;text-align: center;}
  .code_main img{width: 129px;height: 129px;}
-
+ .modal-dialog{margin-top:200px;}
 .input-group .form-control,.btn {z-index: 0 !important;}
