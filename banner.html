@@ -48,7 +48,7 @@
 <body>
 <div class="bottom-banner">
     <img id="tyc_banner_left" class="banner-left" style="display: none" alt="title" src="image/buttonleft_watch.jpg" />
-    <div id="tyc_banner_bottom" class="banner-bottom">
+    <div id="tyc_banner_bottom" class="banner-bottom" style="display: none">
         <div class="content" id="js-banner-click">
             <div class="main banner-3d-filp-up" id="js-banner-main">
                 <img class="img" src="image/banner_bottom_watch.png" />
@@ -58,19 +58,29 @@
     </div>
 </div>
 <script type="text/javascript">
+
     /*关闭按钮*/
     var closeBtn = document.querySelector("#tyc_banner_close");
     var banner_left = document.querySelector(".banner-left");
     var banner_bottom = document.querySelector(".banner-bottom");
     var banner_click = document.querySelector("#js-banner-click");
 
+    //sessionStorage.setItem('isHidden',false);//控制是否显示banner
+    var isHidden = sessionStorage.getItem('isHidden');//null、false表示显示；true表示隐藏
+    if(isHidden == null || isHidden == 'false'){
+        banner_bottom.style.display = 'block';
+    }else{
+        banner_left.style.display = 'block';
+    }
     closeBtn.onclick=function () {
         banner_bottom.style.display = 'none';
         banner_left.style.display = 'block';
+        sessionStorage.setItem('isHidden',true);
     }
     banner_left.onclick=function () {
         banner_left.style.display = 'none';
         banner_bottom.style.display = 'block';
+        sessionStorage.setItem('isHidden',false);
     }
     banner_click.onclick=function () {
         window.location.href = 'http://wenda.zhixie.info'

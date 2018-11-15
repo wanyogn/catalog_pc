@@ -33,7 +33,6 @@ $(function(){
             return;
         }
         window.open("search.html?classify=key&keyword="+Base64.encode(val));
-
     });
 
     $(".search_number_btn").click(function(){//编号搜索
