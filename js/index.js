@@ -161,7 +161,7 @@ function contentDetail(data,dom){
         var obj1 = arr[j];
         $(inner_list[j].getElementsByClassName("product_description")).html(obj1.product_description);
         $(inner_list[j].getElementsByClassName("product_use")).html(obj1.expected_use);
-        $(inner_list[j].getElementsByClassName("product_example")).html(getExampleCount(obj1.product_example));
+        $(inner_list[j].getElementsByClassName("product_example")).html(getExampleCount(obj1.product_example,obj1.product_example_count));
         $(inner_list[j].getElementsByClassName("product_classify")).html(obj1.management_category);
         if(obj1.composite_product == "是"){
             $(inner_list[j].getElementsByClassName("product_isZH")).html("药械组合");
@@ -173,38 +173,31 @@ function contentDetail(data,dom){
     dom.toggleClass("in");
 }
 
-/*品名举例的数量计算*/
-function getExampleCount(str){
-    var arr = str.split("、")
-    var _html = '';
-    var count = '';
-    if(arr.length > 0){
-        if(arr[0] != ""){
-            for(var i = 0;i < arr.length;i++){
-                sendAjax('http://localhost:9005/catalog/search_product_count',{"keyword":arr[i],"num":0},function(data){
-                    var json = JSON.parse(data);
-                    count = json.matchCount;
-                });
-                if(count == 0){
-                    _html += arr[i]
+/**
+ * 品名举例的数量计算
+ * @param nameStr  品名举例数据
+ * @param countStr 数量数组
+ */
+function getExampleCount(nameStr,countStr) {
+    let nameArr = nameStr.split("、");
+    let countArr = countStr.split("%%");
+    let _html = '';
+    if(nameArr.length > 0) {
+        if (nameArr[0] != "") {
+            for (let i = 0; i < nameArr.length; i++) {
+                if(countArr[i] == 0){
+                    _html += nameArr[i]
                 }else{
-                     _html += '<a target="_blank" href="http://www.yixiecha.cn/search_pro.html?class=pro&keyword='+arr[i]+'">'
-                            +arr[i]
-                            +'<span class="badge">'+count+'</span>'
+                    _html += '<a target="_blank" href="http://www.yixiecha.cn/search_pro.html?class=pro&keyword='+nameArr[i]+'">'
+                        +nameArr[i]
+                        +'<span class="badge">'+countArr[i]+'</span>'
                         +'</a>';
-                }
-               
-                if(i != arr.length - 1){
-                    _html += "、";
                 }
             }
         }
-    	
     }
-    
     return _html;
 }
-
 function getQueryVariable(variable)
 {
    var query = window.location.search.substring(1);
